@@ -1,0 +1,18 @@
+
+@{
+    ViewBag.Title = "Students";
+    Layout = "_Layout";
+}
+
+<h2>Liste des etudiants dans le course @ViewBag.course</h2>
+
+@foreach(var student in @ViewBag.students)
+{
+    <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header">@student.FirstName @student.LastName</div>
+      <div class="card-body">
+        <h5 class="card-title">@student.University</h5>
+        <p class="card-text">@student.PhoneNumber</p>
+      </div>
+    </div>
+}

@@ -1,0 +1,17 @@
+@{
+    Layout = "_Layout";
+}
+
+
+<div>
+    <h1> Liste des courses uniques:</h1>
+    <ul class="list-group">
+        @foreach (var course in Model)
+        {
+            <a href="/university/@course">
+                            <li class="list-group-item list-group-item-primary m-3">@course</li>
+
+            </a>
+        }
+    </ul>
+</div>
